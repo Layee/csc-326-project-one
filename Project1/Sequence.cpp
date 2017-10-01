@@ -8,21 +8,12 @@ Sequence<ItemType>::Sequence() {
 
 }
 
-
-
-
 template<class ItemType>
-Sequence<ItemType>::Sequence(const ItemType& Size) : {
+Sequence<ItemType>::Sequence(const ItemType& Size){
 	capacity = Size;
 	myarray = new ItemType[capacity];
 	num_used = 0;
 }
-
-
-
-
-
-
 
 
 // check if the container is empty
@@ -36,8 +27,6 @@ bool Sequence<ItemType>::isEmpty() {
 	}
 }
 
-
-
 // check if the container is full
 template <class ItemType>
 bool Sequence<ItemType>::isFull() {
@@ -48,8 +37,6 @@ bool Sequence<ItemType>::isFull() {
 		return false;
 	}
 }
-
-
 
 // Return the total element being used
 template<class ItemType>
@@ -64,44 +51,50 @@ int Sequence<ItemType>::Arraycapacity() {
 	return capacity;
 }
 
-
 // Return a reference to the first items in the container
 template<class ItemType>
-ItemType& Sequence<ItemType>::font(const ItemType& anEntry) {
-	anEntry = myarray[0];
-	return anEntry;
+ItemType& Sequence<ItemType>::font() {
+	return myarray[0];
 }
 
 // Return a reference of the last item in the container
 template<class ItemType>
-ItemType& Sequence <ItemType>::back(const ItemType& anEntry) {
-	anEntry = myarray[capacity - 1];
-	return anEntry;
+ItemType& Sequence <ItemType>::back() {
+	return myarray[capacity - 1];
+	
 }
-
 
 // Push item of the back of the array
 template <class ItemType>
 void Sequence<ItemType>::push_back(const ItemType& anEntry) {
-	myarray[capacity - 1] = anEntry;
+	myarray[num_used] = anEntry;
 	num_used++;
+	
 }
 
 // remove item from the back of the container
 template<class ItemType>
 void Sequence<ItemType>::pop_back(ItemType& anEntry) {
+	anEntry = myarray[num_used - 1];
 	num_used--;
 }
 
 
 
-/*
+
 template<class ItemType>
 ItemType& Sequence<ItemType>::At(int i) {
+	if (i >= capacity && i < 0) {
+		cout << "Out of bound" << endl;
+	}
+	 else
+	 { 
+		return myarray[i];
 
+	}
 }
 
-*/
+
 
 
 
@@ -119,4 +112,5 @@ void Sequence<ItemType>::insert(int i, const ItemType& anEntry) {}
 template<class ItemType>
 Sequence<ItemType>:: ~Sequence() {
 	delete[] myarray; // free the memory
+	myarray = nullptr;
 }

@@ -1,3 +1,4 @@
 ﻿  main.cpp
+c:\users\abraham\desktop\project1\project1\main.cpp(8): warning C4101: 'n': unreferenced local variable
   Project1.vcxproj -> C:\Users\abraham\Desktop\Project1\Debug\Project1.exe
   Project1.vcxproj -> C:\Users\abraham\Desktop\Project1\Debug\Project1.pdb (Partial PDB)

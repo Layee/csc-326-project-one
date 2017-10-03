@@ -19,7 +19,7 @@ Sequence<ItemType>::Sequence(const ItemType& Size){
 // check if the container is empty
 template<class ItemType>
 bool Sequence<ItemType>::isEmpty() {
-	if (nume_used == 0) {
+	if (num_used == 0) {
 		return true;
 	}
 	else {
@@ -48,7 +48,7 @@ int Sequence<ItemType>::numOfElement() {
 // Return array capacity
 template<class ItemType>
 int Sequence<ItemType>::Arraycapacity() {
-	return capacity;
+	return num_used;
 }
 
 // Return a reference to the first items in the container
@@ -60,7 +60,7 @@ ItemType& Sequence<ItemType>::font() {
 // Return a reference of the last item in the container
 template<class ItemType>
 ItemType& Sequence <ItemType>::back() {
-	return myarray[capacity - 1];
+	return myarray[num_used - 1];
 	
 }
 

@@ -100,7 +100,21 @@ ItemType& Sequence<ItemType>::At(int i) {
 
 // create new size
 template <class ItemType>
-void Sequence<ItemType>::resize(int newSize) {}
+void Sequence<ItemType>::resize(int newSize) {
+
+	capacity = newSize;
+	ItemType *resizeArry = new ItemType[newSize];
+
+	for (int i = 0; i < capacity; i++) {
+
+		resizeArry[i] = myarray[i];
+	}
+
+	myarray = resizeArry;
+	delete[] resizeArry;
+	resizeArry = nullptr;
+       
+}
 
 
 

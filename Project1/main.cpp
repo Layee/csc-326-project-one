@@ -120,22 +120,17 @@ int main() {
 			break;
 
 		default:
-			cout << "Pick from the above menu" << endl;
+			cout << " Enter Y/N to quit the program" << endl;
+			cin >> quitProgram;
+
+			if (quitProgram == 'Y' || quitProgram == 'y') {
+				prompt = false;
+			}
+			else {
+				prompt = true;
+			}
 			break;
 		}
-
-
-
-		// End the Program based on the input
-		/*cout << " Enter Y/N to quit the program" << endl;
-		cin >> quitProgram;
-
-		if (quitProgram == 'Y' || quitProgram == 'y') {
-			prompt = false;
-		}
-		else {
-			prompt = true;
-		} */
 	 }
 
 
@@ -143,3 +138,51 @@ int main() {
 	system("pause");
 	return 0;
 }
+
+
+
+/*
+
+
+
+*******************************
+1 - Add to Sequence container
+2 - Check if Sequence container is Empty.
+3 - Check if Sequence container is Full.
+4 - Check the capacity of Sequence container.
+5 - Check the number of element within Sequence container
+6 - Check the font elment within sequence container.
+7 - Check the back element within sequence container.
+9 - Pop or remove at  the end of the container Sequence.
+10 - At - returns a reference at an entry positon.
+11 - Resize the container.
+12 - Insert a new value to the container.
+
+*********************************************
+
+Select  from the Menu:1
+Enter a value to add to the
+orange
+Select  from the Menu:1
+Enter a value to add to the
+banana
+Select  from the Menu:1
+Enter a value to add to the
+peach
+Select  from the Menu:2
+The Container is not empty
+Select  from the Menu:3
+The Container is not full
+Select  from the Menu:4
+The capacity of the coninter is: 3
+Select  from the Menu:4
+The capacity of the coninter is: 3
+Select  from the Menu:5
+The total numbers of elements is: 3
+Select  from the Menu:6
+The font element is: orange
+Select  from the Menu:7
+The back element is: peach
+The element has been pop:
+orange
+*/

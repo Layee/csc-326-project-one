@@ -74,9 +74,12 @@ void Sequence<ItemType>::push_back(const ItemType& anEntry) {
 
 // remove item from the back of the container
 template<class ItemType>
-void Sequence<ItemType>::pop_back(ItemType& anEntry) {
-	anEntry = myarray[num_used - 1];
-	num_used--;
+void Sequence<ItemType>::pop_back(ItemType& anEntry) { 
+	
+		 anEntry = myarray[num_used - 1];
+		 num_used--;
+	
+	
 }
 
 
@@ -119,7 +122,17 @@ void Sequence<ItemType>::resize(int newSize) {
 
 
 template <class ItemType>
-void Sequence<ItemType>::insert(int i, const ItemType& anEntry) {}
+void Sequence<ItemType>::insert(int i, const ItemType& anEntry) {
+
+	if (i < capacity) {
+		myarray[i] = anEntry;
+		num_used++;
+	}
+
+	else {
+		cout << "No space to insert value into" << endl;
+	}
+}
 
 
 // Deconstructor - free the memory after the program executed

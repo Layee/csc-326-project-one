@@ -1,2 +1,5 @@
-﻿  Project1.vcxproj -> C:\Users\abraham\Desktop\Project1\Debug\Project1.exe
+﻿  main.cpp
+c:\users\abraham\desktop\project1\project1\main.cpp(13): warning C4101: 'quitProgram': unreferenced local variable
+c:\users\abraham\desktop\project1\project1\sequence.cpp(98): warning C4715: 'Sequence<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::At': not all control paths return a value
+  Project1.vcxproj -> C:\Users\abraham\Desktop\Project1\Debug\Project1.exe
   Project1.vcxproj -> C:\Users\abraham\Desktop\Project1\Debug\Project1.pdb (Partial PDB)

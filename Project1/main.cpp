@@ -11,6 +11,10 @@ int main() {
 	int   element = 0, 
 		   menu;
 	char quitProgram;
+
+
+	int index;
+	string item;
 	
 	bool prompt = true;
 	Sequence<string>mySequence;
@@ -76,28 +80,20 @@ int main() {
 			break;
 
 		case 4:
-			element = mySequence.Arraycapacity();
-			cout << "The capacity of the coninter is: " << element << endl;
+			cout << "The capacity of the coninter is: " << mySequence.Arraycapacity()<< endl;
 			break;
 
 		case 5:
-
-			element = mySequence.numOfElement();
-			cout << "The total numbers of elements is: " << element << endl;
+			cout << "The total numbers of elements is: " << mySequence.numOfElement() << endl;
 			break;
 
 		case 6:
-			checkElement = mySequence.font();
-			cout << " The font element is: " << checkElement << endl;
+			cout << " The font element is: " << mySequence.font() << endl;
 			break;
 
 		case 7:
-			checkElement = mySequence.back();
-			cout << " The back element is: " << checkElement << endl;
-
-		//case 8:
-		//	checkElement = mySequence.back();
-		//	cout << " The back element is: " << checkElement;
+		;
+			cout << " The back element is: " << mySequence.back() << endl;
 
 		case 9:
 			 mySequence.pop_back(user_input);
@@ -110,7 +106,21 @@ int main() {
 			break;
 		
 
+		case 11:
+			int new_size;
+			cout << "Enter a new size" << endl;
+			cin >> new_size;
+			 mySequence.resize(new_size);
+			break;
+
+		case 12:
+			cout << "Enter an Index and an Item to insert into the container" << endl;
+			cin >> index >> item;
+			mySequence.insert(index, item);
+			break;
+
 		default:
+			cout << "Pick from the above menu" << endl;
 			break;
 		}
 
